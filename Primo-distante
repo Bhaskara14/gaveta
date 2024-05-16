@@ -1,0 +1,32 @@
+print("PRIMO")
+num = int(1) #denominador nas divisoes de primo
+primo = int(2)
+qp = int(0) #quantidade de primos
+x = int(2) #numerador nas divisoes de primo
+div = float(0) #divisao
+dix = float(0) #divisao inteira
+divisores = 1  
+z = 0
+a = input("digite numero: ")
+b = input("digite numero: ")
+
+while qp < 25:
+    while num < (x):
+        div = x/num #divisao normal
+        dix = x//num #divisao arredondada
+        z = div - dix
+       
+        if (div - dix)==0: #se 0 entao divisao exata, divisor
+            divisores = divisores + x
+            #print(divisores)
+            #qp = qp + 1
+        num = num + 1
+       
+    if divisores == (x+1): #entao primo
+        primo = x
+        print(x)
+        qp = qp + 1
+       
+    num = 1        
+    divisores = 1
+    x = x+1 
