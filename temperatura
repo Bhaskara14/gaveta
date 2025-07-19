@@ -1,0 +1,67 @@
+//Conversor de temperatura com menu
+//Autor: Raniery
+//Data: 15/04/2025
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int opcao=0;
+    float c=0, f=0, k=0;
+
+
+    do{
+            printf("\n\n+----------------------------+\n");
+            printf("| CONVERSOR DE TEMPERATURA   |\n");
+            printf("+----------------------------+\n");
+            printf("| 1. Celsius para Fahrenheit |\n");
+            printf("| 2. Celsius para Kelvin     |\n");
+            printf("| 3. Kelvin para Celsius     |\n");
+            printf("| 4. Fahrenheit para Celsius |\n");
+            printf("| 5. Finalizar               |\n");
+            printf("+----------------------------+\n");
+
+
+
+            printf("Digite a opção: ");
+            scanf("%d",&opcao);
+
+            switch(opcao){
+                case 1:
+                    printf("Digite a temperatura em Celsius: ");
+                    scanf("%f",&c);
+                    f = (c*1.8)+32;
+                    printf("A temperatura em graus Fahrennheit e: %3.1f\n",f);
+                break;
+                case 2:
+                    printf("Digite a temperatura em Celsius: ");
+                    scanf("%f",&c);
+                    k = c+273;
+                    printf("A temperatura em Kelvin e: %3.1f\n",k);
+                break;
+                case 3:
+                    printf("Digite a temperatura em Kelvin: ");
+                    scanf("%f",&k);
+                    c = k - 273;
+                    printf("A temperatura em Celsius e: %3.1f\n",c);
+                break;
+                case 4:
+                    printf("Digite a temperatura em Fahrenheit: ");
+                    scanf("%f",&c);
+                    c = (f-32)/1.8;
+                    printf("A temperatura em Celsius e: %3.1f\n",c);
+                break;
+                case 5:
+                    printf("Fim da execução\n");
+                break;
+                default:
+                    printf("opcao invalida\n");
+                break;
+            }
+
+    }while(opcao!=5);
+
+
+    return 0;
+
+}
